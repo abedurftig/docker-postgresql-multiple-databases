@@ -1,0 +1,10 @@
+services:
+    db:
+        image: postgres-multi-db
+        restart: always
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_MULTIPLE_DATABASES=db1,db2
+            - POSTGRES_USER=dbuser
+            - POSTGRES_PASSWORD=dbpass
